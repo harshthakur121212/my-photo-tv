@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>My Photo TV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="logo">▣</div>
+    <div><h1>My Photo TV</h1><p>मोबाइल से फोटो भेजें, TV पर देखें</p></div>
+  </header>
+
+  <main>
+    <section class="panel intro">
+      <h2>📺 आपकी तस्वीरें, बड़ी स्क्रीन पर</h2>
+      <p>मोबाइल से फोटो चुनें और अपलोड करें। फिर TV के ब्राउज़र में इसी वेबसाइट को खोलकर तस्वीरें देखें।</p>
+      <div class="notice">ध्यान दें: फोटो TV पर दिखाने के लिए वेबसाइट पर अपलोड होंगी। निजी तस्वीरें केवल अपनी भरोसेमंद वेबसाइट/डिवाइस पर ही अपलोड करें।</div>
+    </section>
+
+    <section class="panel">
+      <h2>📤 मोबाइल से फोटो अपलोड करें</h2>
+      <label class="file-picker" for="photoInput">＋ फोटो चुनें</label>
+      <input id="photoInput" type="file" accept="image/*" multiple>
+      <button id="uploadBtn" class="primary">फोटो अपलोड करें</button>
+      <p id="status" class="status" aria-live="polite">अभी कोई फोटो नहीं चुनी गई।</p>
+      <div id="preview" class="grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="row"><h2>🖼️ TV फोटो गैलरी</h2><button id="refreshBtn" class="secondary">रीफ्रेश</button></div>
+      <p class="muted">TV पर यह पेज खोलें और गैलरी में फोटो चुनें।</p>
+      <div id="gallery" class="grid"><p class="muted">फोटो लोड हो रही हैं…</p></div>
+    </section>
+  </main>
+
+  <footer>My Photo TV · आपकी तस्वीरें, आपकी स्क्रीन</footer>
+
+  <div id="viewer" class="viewer hidden">
+    <button id="closeViewer" class="close" aria-label="बंद करें">✕</button>
+    <button id="prevPhoto" class="nav prev" aria-label="पिछली फोटो">‹</button>
+    <img id="largePhoto" alt="चुनी हुई फोटो">
+    <button id="nextPhoto" class="nav next" aria-label="अगली फोटो">›</button>
+    <div id="photoCaption" class="caption"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
